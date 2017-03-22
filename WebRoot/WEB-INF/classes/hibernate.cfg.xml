@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<!-- 数据库连接信息 -->
+	<!-- <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> 
+		<property name="hibernate.connection.url">jdbc:mysql:///lql01? Unicode=true 
+		&amp;characterEncoding=UTF8</property> <property name="hibernate.connection.username">root</property> 
+		<property name="hibernate.connection.password">123456</property> -->
+	<property name="hibernate.dialect">
+		org.hibernate.dialect.MySQL5Dialect
+	</property>
+	<!-- 其他配置 -->
+	<property name="hibernate.show_sql">true</property>
+	<property name="hibernate.format_sql">true</property>
+	<property name="hibernate.hbm2ddl.auto">update</property>
+
+	<!-- 导入映射文件 -->
+	<property name="myeclipse.connection.profile">mysql</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">123456</property>
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	<mapping resource="com/lql/oa/domain/Department.hbm.xml"></mapping>
+	<mapping resource="com/lql/oa/domain/Forum.hbm.xml"></mapping>
+	<mapping resource="com/lql/oa/domain/Privilege.hbm.xml"></mapping>
+	<mapping resource="com/lql/oa/domain/Reply.hbm.xml"></mapping>
+	<mapping resource="com/lql/oa/domain/Role.hbm.xml"></mapping>
+	<mapping resource="com/lql/oa/domain/Topic.hbm.xml"></mapping>
+	<mapping resource="com/lql/oa/domain/User.hbm.xml"></mapping>
+</session-factory>
+
+</hibernate-configuration>
